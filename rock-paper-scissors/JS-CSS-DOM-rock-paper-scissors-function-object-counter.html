@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link
+      rel="stylesheet"
+      href="JS-CSS-DOM-rock-paper-scissors-function-object-counter.css"
+    />
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <p class="result"></p>
+    <p class="move"></p>
+    <p class="score"></p>
+    <button
+      class="move-button"
+      onclick="
+        computerChoose();
+        playGame('rock');
+        "
+    >
+      <img class="move-icon" src="images/rock-emoji.png" alt="" />
+    </button>
+    <button
+      class="move-button"
+      onclick="
+        computerChoose();
+        playGame('paper');
+        "
+    >
+      <img class="move-icon" src="images/paper-emoji.png" alt="" />
+    </button>
+    <button
+      class="move-button"
+      onclick="
+        computerChoose();  
+        playGame('scissors');
+        "
+    >
+      <img class="move-icon" src="images/scissors-emoji.png" alt="" />
+    </button>
+    <button
+      class="reset-score-button"
+      onclick="  
+    score.loses = 0;
+    score.wins = 0;
+    score.ties = 0;
+    const scores = (document.querySelector(
+    '.score'
+    ).innerText = `Win: ${score.wins} Lose: ${score.loses} Tie: ${score.ties}`);"
+    >
+      Reset Score
+    </button>
+    <script src="JS-CSS-DOM-rock-paper-scissors-function-object-counter.js"></script>
+  </body>
+</html>

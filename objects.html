@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      const product = {
+        name: "corap",
+        price: 200,
+      };
+
+      console.log(typeof product);
+      console.log(product.name);
+      console.log(product["name"]);
+      console.log(product.price);
+      product.name = "pamuk";
+      console.log(product.name);
+      product.newProperty = true; //you can add the anoter property&value
+      console.log(product);
+
+      delete product.newProperty; //you can also delete the property.
+      console.log(product);
+
+      //////////////////////////////////////
+
+      const product2 = {
+        name: "test",
+        "delivery-time": "1 day",
+        rating: {
+          //nested object
+          stars: 4.5,
+          count: 95,
+        },
+        fun: function function1() {
+          console.log("function inside object");
+        },
+      };
+
+      console.log(product2["delivery-time"]);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+
+      const { stars, count } = product2.rating;
+      console.log(stars);
+
+      const object9 = {
+        // method: function function9() {
+        //   console.log("method");
+        // },
+        method() {
+          console.log("method");
+        },
+      };
+      object9.method();
+    </script>
+  </body>
+</html>

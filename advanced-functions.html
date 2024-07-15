@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button class="event-button">Click</button>
+    <script>
+      /*
+      function greeting() {
+        console.log("hello");
+      }
+      greeting();
+
+      const num = 2;
+      const function1 = function () {
+        console.log("hello2");
+      };
+      console.log(function1);
+      function1();
+      const object1 = {
+        num: 2,
+        fun: function greeting() {
+          console.log("hello3");
+        },
+      };
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("hello4");
+      });
+      */
+      //first parameter is function, second parameter is callback time
+      // setTimeout(function () {
+      //   console.log("timeout");
+      //   console.log("timeout2");
+      // }, 3000);
+      // console.log("next line");
+      //setTimeout function runs and program continue next lines. (asychronous code)
+      //expected output->
+      // #1 next line
+      // #2 timeout
+
+      // setInterval(function () {
+      //   console.log("interval");
+      // }, 3000);
+      // console.log("next line2");
+
+      // const arrowFunction = () => {
+      //   console.log("arrow function");
+      // };
+      // arrowFunction();
+      const button = document.querySelector(".event-button");
+
+      const eventListener = () => {
+        console.log("click");
+      };
+
+      button.addEventListener("click", eventListener);
+
+      button.removeEventListener("click", eventListener);
+
+      button.addEventListener("click", () => {
+        console.log("event button clicked2");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [10, 20, 30];
+      console.log(myArray);
+      myArray.push(12); //arrayin sonuna eleman ekle.
+      console.log(myArray);
+      myArray.splice(0, 2); //0dan başla 2'ye kadar sil. 2.parametre dahil degil.
+      console.log(myArray);
+
+      const array1 = [1, 2, 3];
+      const array2 = array1;
+      array2.push(4);
+      console.log(array1); //expected output is 1,2,3
+      console.log(array2); //expected output is 1,2,3,4
+      //but both output is the same ->1,2,3,4. because arrays uses references.
+      //if we use the array.slice (destructing) method. like -> array2=array1.slice() the output will be 1,2,3 for array1 and 1,2,3,4 for array2
+      const [firstValue, secondValue] = [1, 2, 3];
+      console.log(firstValue); //1
+      console.log(secondValue); //2
+      // undefined
+    </script>
+  </body>
+</html>
